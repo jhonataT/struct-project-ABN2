@@ -6,7 +6,7 @@
     Faça um programa que recebe uma árvore n-ária
     ordenada e gera uma árvore binária ordenada
     correspondente a primeira.
-    
+
 */
 
 #include <stdio.h>
@@ -42,6 +42,6 @@ int main() {
     verify = insert(r, 10, 4);
     verify = insert(r, 11, 10);
 
-    showNTree(r);
+    showNTree(r, false);
     printf("\n");
 }
