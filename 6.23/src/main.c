@@ -25,12 +25,13 @@ typedef int KEY_TYPE;
 #include "./functions/nTree/showNTree.c"
 #include "./functions/nTree/insert.c"
 #include "./functions/binaryTree/structsBinaryTree.c"
+#include "./functions/binaryTree/navegacaoBin.c"
 #include "./functions/binaryTree/initBinaryTree.c"
 #include "./functions/binaryTree/insertBinaryTree.c"
-// #include "./functions/binaryTree/navegacaoBin.c"
 
 int main() {
     KEY_TYPE arr[11] = {0};
+
     PONT r = inicializa(1);
     arr[0] = 1;
     int index = 1;
@@ -56,9 +57,8 @@ int main() {
 
     showNTree(r);
     printf("\n");
-    // sweepingNTree()
-    for(int i = 0; i < 11; i++){
-        printf("%d ", arr[i]);
-    }
+
+    PONT_BINARY root = insertLevelOrder(root, arr, 0, 11);
+    inOrder(root);
     printf("\n");
 }
