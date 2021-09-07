@@ -19,7 +19,7 @@ void inOrder(PONT_BINARY root)
     if (root != NULL)
     {
         inOrder(root->left);
-        printf("%d -> ", root->key);
+        printf("%d ", root->key);
         inOrder(root->right);
     }
 }
