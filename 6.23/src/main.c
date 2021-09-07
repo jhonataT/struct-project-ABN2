@@ -30,18 +30,35 @@ typedef int KEY_TYPE;
 // #include "./functions/binaryTree/navegacaoBin.c"
 
 int main() {
+    KEY_TYPE arr[11] = {0};
     PONT r = inicializa(1);
-    BOOL verify = insert(r, 2, 1);
-    verify = insert(r, 3, 1);
-    verify = insert(r, 4, 1);
-    verify = insert(r, 5, 2);
-    verify = insert(r, 6, 3);
-    verify = insert(r, 7, 3);
-    verify = insert(r, 8, 3);
-    verify = insert(r, 9, 4);
-    verify = insert(r, 10, 4);
-    verify = insert(r, 11, 10);
+    arr[0] = 1;
+    int index = 1;
+    insert(r, 2, 1, arr, index);
+    index += 1;
+    insert(r, 3, 1, arr, index);
+    index += 1;
+    insert(r, 4, 1, arr, index);
+    index += 1;
+    insert(r, 5, 2, arr, index);
+    index += 1;
+    insert(r, 6, 3, arr, index);
+    index += 1;
+    insert(r, 7, 3, arr, index);
+    index += 1;
+    insert(r, 8, 3, arr, index);
+    index += 1;
+    insert(r, 9, 4, arr, index);
+    index += 1;
+    insert(r, 10, 4, arr, index);
+    index += 1;
+    insert(r, 11, 10, arr, index);
 
-    showNTree(r, false);
+    showNTree(r);
+    printf("\n");
+    // sweepingNTree()
+    for(int i = 0; i < 11; i++){
+        printf("%d ", arr[i]);
+    }
     printf("\n");
 }

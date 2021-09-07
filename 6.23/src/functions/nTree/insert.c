@@ -1,6 +1,7 @@
-BOOL insert(PONT raiz, KEY_TYPE novaChave, KEY_TYPE chavePai){
+int insert(PONT raiz, KEY_TYPE novaChave, KEY_TYPE chavePai, KEY_TYPE arr[], int index){
+    arr[index] = novaChave;
     PONT pai = searchKey(chavePai, raiz);
-    if(!pai) return (false);
+    if(!pai) return 0;
 
     PONT filho = criaNovoNo(novaChave);
     PONT p = pai->primFilho;
@@ -12,5 +13,5 @@ BOOL insert(PONT raiz, KEY_TYPE novaChave, KEY_TYPE chavePai){
         p->proxIrmao = filho;
     }
 
-    return (true);
+    return index + 1;
 }
