@@ -1,4 +1,5 @@
 /*
+    AB2 - AT2
     Escreva uma variação do algoritmo Quick Sort
     para ordenar uma lista de números considerando
     que a escolha do pivô é justamente o último elemento
