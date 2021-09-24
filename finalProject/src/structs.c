@@ -1,4 +1,4 @@
 typedef struct {
-    char id;
-    int directions[4];
-} cars;
+    int id;
+    char directions[4];
+} CAR[100];
