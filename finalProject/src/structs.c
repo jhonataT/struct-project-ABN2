@@ -1,7 +1,14 @@
+/*
+    CITY->direction:
+    1 cima/esquerda 
+    2 baixo/direita 
+    3 cima/direita 
+    4 baixo/esquerda 
+*/
+
 typedef struct {
     int currentChar;
-    int direction; // 1 cima/esquerda | 2 baixo/direita | 3 cima/direita | 4 baixo/esquerda
-
+    int direction;  
 } CITY;
 
 typedef struct {
@@ -14,5 +21,4 @@ typedef struct {
     int yellow;
     int green;
 } SEMAPHORE;
-
 
