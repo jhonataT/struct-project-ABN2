@@ -1,8 +1,8 @@
 int initCars(CAR cars[]){
     for(int index = 0; index < 100; index++){
-        int lastNumber = index % 10;
-        cars[index]->id = index;
-        if(lastNumber == 0){
+        int lastNumber = (index + 1) % 10;
+        cars[index]->id = index + 1;
+        if(lastNumber == 0 || lastNumber == 2){
             cars[index]->directions[0] = 'c';
             cars[index]->directions[1] = 'd';
             cars[index]->directions[2] = 'b';
@@ -12,11 +12,6 @@ int initCars(CAR cars[]){
             cars[index]->directions[1] = 'e';
             cars[index]->directions[2] = 'b';
             cars[index]->directions[3] = 'd';
-        } else if(lastNumber == 2){
-            cars[index]->directions[0] = 'c';
-            cars[index]->directions[1] = 'd';
-            cars[index]->directions[2] = 'b';
-            cars[index]->directions[3] = 'e';
         } else if(lastNumber == 3){
             cars[index]->directions[0] = 'b';
             cars[index]->directions[1] = 'e';
@@ -32,7 +27,7 @@ int initCars(CAR cars[]){
             cars[index]->directions[1] = 'b';
             cars[index]->directions[2] = 'd';
             cars[index]->directions[3] = 'c';
-        } else if(lastNumber == 6){
+        } else if(lastNumber == 6 || lastNumber == 8){
             cars[index]->directions[0] = 'd';
             cars[index]->directions[1] = 'b';
             cars[index]->directions[2] = 'e';
@@ -42,11 +37,6 @@ int initCars(CAR cars[]){
             cars[index]->directions[1] = 'c';
             cars[index]->directions[2] = 'd';
             cars[index]->directions[3] = 'b';
-        } else if(lastNumber == 8){
-            cars[index]->directions[0] = 'd';
-            cars[index]->directions[1] = 'b';
-            cars[index]->directions[2] = 'e';
-            cars[index]->directions[3] = 'c';
         } else if(lastNumber == 9){
             cars[index]->directions[0] = 'c';
             cars[index]->directions[1] = 'e';
