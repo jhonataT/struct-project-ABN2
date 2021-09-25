@@ -3,5 +3,8 @@
         "stdio.h": "c",
         "sstream": "c",
         "random": "c"
-    }
+    },
+    "cSpell.words": [
+        "semap"
+    ]
 }
