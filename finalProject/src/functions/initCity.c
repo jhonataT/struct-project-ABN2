@@ -1,3 +1,24 @@
+int setColumnStreetDirection(CITY cities[][37], char name[]){
+    // Get directions by column number
+    int validVerticalStreet = 0;
+
+    for(int j = 0; j < 37; j++){
+        if(j > 0 && j < 36 && j % 4 == 0 && validVerticalStreet <= 8){
+            ++validVerticalStreet;
+        }  
+
+        for(int i = 0; i < 28; i++){
+            if(validVerticalStreet <= 0 || j >= 34 || j % 4 != 0){
+                // cities[i][j].direction = 0;    
+            } else {
+                cities[i][j].direction = dictionary(tolower(name[validVerticalStreet - 1 + 8]));
+            }
+        }
+        printf("%d\n", cities[0][j].direction);
+    }
+
+
+}
 
 int setLineStreetDirection(CITY cities[][37], char name[]){
     // Get directions by line number
@@ -24,7 +45,6 @@ int initCity(CITY cities[][37]){
     int horizontalStreet = '-';
     int verticalStreet = '|';
     int borderStreet = '#';
-    int validHorizontalStreet = 0, validVerticalStreet = 0; 
     
     int indexLetter = 0;
 
@@ -40,9 +60,9 @@ int initCity(CITY cities[][37]){
                 cities[i][j].currentChar = verticalStreet;
             else 
                 cities[i][j].currentChar = borderStreet;
-            
         }
     }
 
     setLineStreetDirection(cities, name);
+    setColumnStreetDirection(cities, name);
 }

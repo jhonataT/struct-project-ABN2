@@ -26,11 +26,11 @@ int main() {
     initCars(cars);
 
     int i = 0;
-    // while(1){
-    //     if(i == 1000) break;
-    //     sleep(1);
-    //     initCity(cities);
-    //     setCars(cars, cities);
-    //     ++i;
-    // }
+    while(1){
+        if(i == 1000) break;
+        sleep(1);
+        initCity(cities);
+        setCars(cars, cities);
+        ++i;
+    }
 }
