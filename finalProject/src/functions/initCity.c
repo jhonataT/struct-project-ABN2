@@ -14,7 +14,6 @@ int setColumnStreetDirection(CITY cities[][37], char name[]){
                 cities[i][j].direction = dictionary(tolower(name[validVerticalStreet - 1 + 8]));
             }
         }
-        printf("%d\n", cities[0][j].direction);
     }
 
 
